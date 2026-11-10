@@ -24,7 +24,7 @@
 
   // ---------------------------------------------------------------- scaling
   function fit() {
-    const scale = Math.max(1, Math.min(window.innerWidth / W, window.innerHeight / H));
+    const scale = Math.max(1, Math.min((window.innerWidth - 32) / W, (window.innerHeight - 40) / H));
     const s = scale >= 2 ? Math.floor(scale) : scale;
     canvas.style.width = `${W * s}px`;
     canvas.style.height = `${H * s}px`;
